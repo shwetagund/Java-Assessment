@@ -1,0 +1,71 @@
+Q1. Please do all the CRUD operations using JDBC with Table Employee.
+Q2. Develop a restful webservice to perform CRUD operations. Entities should have Student , Courses and Teachers. 
+Q3. Create your own github account and repository and push, pull and clone a file from command prompt? 
+
+Theoretical Questions:
+Q1.What is JDBC Driver? Please explain in detail.
+Ans:
+1.JDBC Is nothing but Java Database Connectivity (JDBC) is an application programming interface (API) for the programming language Java,which defines how a client may access any kind of tabular data,especially relational database. 
+2.It acts as a middle layer interface between java applications and database.
+3.JDBC classes are contained in the Java Package java.sql and javax.sql.
+4.There are 4 types of JDBC drivers:
+    1.driver or JDBC-ODBC bridge driver:-Its uses ODBC driver to connect to the database.
+    2.driver or Native-API driver:-it uses the clientside libraries of the database.This driver converts JDBC method calls                                    into native calls of the database API.
+    3.driver or Network Protocol driver:-here all the database connectivity drivers are present in a single server,hence                                    no need of individual client-side installation.
+    4.driver or Thin driver:-This driver interact directly with database.It does not require any native database library.
+
+Q2.What are the JDBC API components? 
+Ans:There are JDBC API Components
+    1.DriverManager
+    2.Driver
+    3.Connection
+    4.Statement
+    5.ResultSet 
+    6.SQLException
+
+Q3. What are the differences between Statement and PreparedStatement interface? 
+Ans:-1.Statement :1.It is used when SQL query is to be executed only once.
+                  2.Performance is very low.
+		  3.It is base interface.
+                  4.It is used for DDL statements.
+                  5.Used for CREATE, ALTER, DROP statements.
+2.PreparedStatement:-1.It is used when SQL query is to be executed multiple times.
+                     2.Performance is better than Statement.
+                     3.It extends statement interface.
+                     4.It is used for any SQL Query.
+                     5.Used for the queries which are to be executed multiple times.
+
+Q4. What is the major difference between java.util.Date and java.sql.Date data type? 
+Ans:- 1.java.sql.Date :1.its just represent DATE without time information.
+ 
+      2.java.util.Date:1.its justrepresents both Date and Time information. 
+       This is the major difference thats why java.util.Date can not directly map to java.sql.Date.
+
+Q5. What do you understand by Reflection in Java programming language? 
+Ans:-Reflection in java is an API which is used to examine or modify the behavior of methods,classes,interfaces at runtime.The required classes for reflection are provided under java.lang.reflect package.Reflection gives us information about the class to which an object belongs and also the methods of that class which can be executed by using the object.Through reflection we can invoke methods at runtime irrespective of the access specifier used with them.
+
+
+Q6. What is Gang of Four (GOF)?
+Ans:-Gang of four is basically a design pattern book author name.Gang Of Four described each design pattern with a UML diagram by taking real-world examples with coding.The GOF is contains three patters first one is Creational Patterns,second one is Structural Patterns,and third one is Behavioral Patterns.
+
+Q7. What is Factory pattern and Abstract factory pattern? 
+Ans:-Factory pattern:factory pattern provides a method of creating objects without specifying the exact class used to create it.And it hides constuction of single object. 
+    Abstract factory pattern:Abstract Factory design pattern is one of the Creational pattern.It is almost similar to Factory Pattern is considered as another layer of abstraction over factory pattern.Declares an interface for operations that create abstract product objects.And its provides a method to combine a group of individual factories without specifying their concrete classes. 
+
+Q8.What is Singleton pattern? How can you create Singleton class in java? 
+Ans:-Singleton Patter is a class that has only one instance and provides a global point of access to it.class must ensure that only single instance should be created and single object can be used by all other classes.Singleton pattern is mostly used in multi-threaded and database applications.
+     There are two forms of singleton design pattern
+     1.Early Instantiation:it is creation of instance at load time.
+     2.Lazy Instantiation:it is creation of instance when required.
+2.To create a singleton class:-1.Ensure that only one instance of the class exists.
+                               2.to provide global access to that instance by:
+                               3.Declaring all constructors of the class to be private.
+                               4.to providing a static method that returns a reference to the instance.The lazy initialization concept is used to write the static methods.
+                               5.The instance is stored as a private static variable.
+
+Q9. What is a version control system (VCS) and what is git repository? 
+Ans:-A Version Control System (VCS) refers to the method used to save a file's into the .git repository during the next commit snapshot.Version control,also known as source control, is the practice of tracking and managing changes to software code.VCS systems are software tools that help software teams manage changes to source code over time.
+   Repositories in GIT contain a collection of files of various different versions of a Project. These files are imported from the repository into the local server of    the user for further updations and modifications in the content of the file.
+
+Q10.Can you explain head in terms of git and also tell the number of heads that can be present in a repository?
+Ans:-HEAD points to the starting point of the present branch in the repository at all times.It can be thought of as the last state or the last checked out point in a repository.If we are viewing the master branch, then “master” is also our HEAD. If we are not viewing the master branch,then whatever branch or commit we are viewing is our HEAD.

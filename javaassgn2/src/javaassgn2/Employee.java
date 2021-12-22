@@ -1,0 +1,44 @@
+package javaassgn2;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class Employee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("org.postgresql.Driver");
+			Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/assignment2", "postgres",
+					"postgres");
+			Statement st = con.createStatement();
+
+			// step 1creating Table is database
+//			 boolean status =st.execute("create table employee(empid int, empname varchar(20), empphone text," + "empdepartment varchar(40), empemail varchar(30), emprole varchar(50));");
+
+			// step 2 adding data into the table
+			/*st.executeUpdate("insert into employee values(001,'shraddha gund', '8802060125','EAD', 'shraddha@gamil.com', 'Sr. Software Engineer'),"
+			  +"(002,'Niranjan patil', '8888888811','ADAGRAD', 'patil@gamil.com', 'Sr. Manager'),"
+			  +
+			  "(003,'Shweta gund ', '7448281995','SAP', '@gamil.com', 'Sr. Software Engineer'),"
+			  +
+			  "(004,'Cristano', '9131001214','CD', 'Ronaldoabc@gamil.com', 'Sr. Practice Lead');"
+			  ); System.out.println("Query has been executes Successfully");*/
+			 
+
+			// step 3 to update a paritcular record
+//			 st.execute("update employee set empname='Rock' where empid =3;");
+
+			// Step 4 to delete particular record
+           // st.execute("delete from employee where empid=1;");
+
+			st.close();
+			con.close();
+		} catch (Exception e) {
+			System.out.println("Error");
+		}
+
+	}
+
+}
