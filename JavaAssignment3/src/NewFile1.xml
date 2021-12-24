@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+    <!-- bean definitions here -->
+    <bean class="Employee" name="emp123">
+    <property name="Id"    value="80001"></property>           <!-- injecting data -->
+    <property name="empName"  value="Jhon Weak"></property>
+    </bean>
+    
+    
+     <bean class="Laptop" name="mylaptop">
+         <!-- Dependency injection using constructor -->
+         <constructor-arg value="10" ></constructor-arg>
+         <constructor-arg value="processeor"></constructor-arg>
+         <constructor-arg value="8gb"></constructor-arg>
+        
+        
+         
+     </bean>
+</beans>
